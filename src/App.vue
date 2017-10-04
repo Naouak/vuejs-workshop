@@ -1,11 +1,8 @@
 <template>
   <div id="app">
     <ol class="list">
-      <li><Question question="Comment ça va ?"></Question></li>
-      <li><Question question="Bien ou bien ?"></Question></li>
-      <li><Question question="Et la famille ?"></Question></li>
+      <li v-for="question in questions"><Question :question="question.question"></Question></li>
     </ol>
-
   </div>
 </template>
 
@@ -15,7 +12,13 @@ import Question from './components/Question.vue';
 export default {
   name: 'app',
   data () {
-    return {}
+    return {
+    	questions: [
+        {question: "Comment ça va ?"},
+        {question: "Bien ou bien ?"},
+        {question: "Et la famille ?"}
+      ]
+    }
   },
   components: {
   	Question
