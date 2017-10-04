@@ -1,6 +1,6 @@
 # vuejs-workshop
 
-> A Vue.js project
+> Material for a Vue.js workshop I organize.
 
 ## Build Setup
 
