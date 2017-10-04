@@ -3,7 +3,7 @@
     <ol class="list">
       <li v-for="(question, number) in questions">
         Question #{{number+1}} :
-        <Question :question="question.question"></Question>
+        <Question :question="question.question" :choices="question.choices"></Question>
       </li>
     </ol>
   </div>
@@ -17,9 +17,9 @@ export default {
   data () {
     return {
     	questions: [
-        {question: "Comment ça va ?"},
-        {question: "Bien ou bien ?"},
-        {question: "Et la famille ?"}
+        {question: "Comment ça va ?", choices: ['Bien', 'Pas mal', 'Je suis malada', 'Comme un Lundi']},
+        {question: "Bien ou bien ?", choices: ['Bien', 'ou bien']},
+        {question: "Et la famille ?", choices: ['Ça va, Ça va...', 'Imohtep']}
       ]
     }
   },
