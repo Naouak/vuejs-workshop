@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <ol class="list">
-      <li v-for="question in questions"><Question :question="question.question"></Question></li>
+      <li v-for="(question, number) in questions">
+        Question #{{number+1}} :
+        <Question :question="question.question"></Question>
+      </li>
     </ol>
   </div>
 </template>
