@@ -1,13 +1,17 @@
 <template>
   <div class="question">
-    Ceci est une question
+    {{question}}
   </div>
 </template>
 <style>
 </style>
 <script>
 	export default {
-		props: {},
+		props: {
+			question: {
+				required: true
+      }
+    },
 		data() {
 			return {}
 		},

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <ol class="list">
-      <li><Question></Question></li>
-      <li><Question></Question></li>
-      <li><Question></Question></li>
+      <li><Question question="Comment ça va ?"></Question></li>
+      <li><Question question="Bien ou bien ?"></Question></li>
+      <li><Question question="Et la famille ?"></Question></li>
     </ol>
 
   </div>
