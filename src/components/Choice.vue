@@ -1,7 +1,7 @@
 <template>
-  <div>
-    {{text}}
-  </div>
+    <div @click="choiceSelected" :style="{ 'font-weight': this.selected?'bold':'normal'}">
+        {{text}}
+    </div>
 </template>
 <style>
 </style>
@@ -10,12 +10,19 @@
 		props: {
 			text: {
 				required: true
-      }
-    },
+			},
+            selected: {
+				default: false
+            }
+		},
 		data() {
 			return {}
 		},
-		methods: {},
+		methods: {
+			choiceSelected() {
+				this.$emit('choice-selected', this.text);
+			}
+		},
 		components: {}
 	}
 </script>
