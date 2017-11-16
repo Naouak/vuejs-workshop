@@ -8,11 +8,14 @@
                           @answer-selected="(_, answer) => (question.selectedChoice = answer)"></Question>
             </li>
         </ol>
+
+        <question-maker></question-maker>
     </div>
 </template>
 
 <script>
 	import Question from './components/Question.vue';
+	import QuestionMaker from './components/QuestionMaker.vue';
 
 	export default {
 		name: 'app',
@@ -38,7 +41,8 @@
 			}
 		},
 		components: {
-			Question
+			Question,
+            QuestionMaker
 		}
 	}
 </script>
